@@ -36,7 +36,16 @@ All code for the Gradient Boosting Machine's training and evaluation is included
 
 ### 3. Logistic Regression
 
-The logistic regression model can be reproduced by running `model_logreg.ipynb`.
+The logistic regression model was optimized using grid search. The optimal parameters are: `{'C': 100, 'penalty': 'l1', 'solver': 'liblinear'}`.
+
+So it can be set up the following way:
+```
+from sklearn.linear_model import LogisticRegression
+best_params = {'C': 100, 'penalty': 'l1', 'solver': 'liblinear'}
+lr = LogisticRegression(**best_params)
+```
+
+All the code for the logistic regression model can be found in `model_logreg.ipynb`.
 
 
 
